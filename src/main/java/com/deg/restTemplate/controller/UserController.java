@@ -27,4 +27,9 @@ public class UserController {
     public ResponseEntity<?> createPost() {
         return new ResponseEntity<>(this.userService.createPost(), HttpStatus.OK);
     }
+
+    @PutMapping
+    public ResponseEntity<?> updateUser(){
+        return new ResponseEntity<>(this.userService.updateUser(), HttpStatus.OK);
+    }
 }

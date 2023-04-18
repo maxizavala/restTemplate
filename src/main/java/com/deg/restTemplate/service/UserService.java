@@ -25,4 +25,11 @@ public class UserService {
         bodyMap.put("userId", "1");
         return restTemplate.postForObject("https://jsonplaceholder.typicode.com/posts", null, String.class, bodyMap);
     }
+
+    public String updateUser(){
+        Map<String, Object> mapUser = new HashMap<>();
+        mapUser.put("name", "Juan");
+        restTemplate.put("https://jsonplaceholder.typicode.com/users/1", mapUser);
+        return "Usuario actualizado";
+    }
 }
